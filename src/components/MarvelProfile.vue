@@ -99,6 +99,10 @@ export default {
 </script>
 
 <style scoped>
+* {
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
 div {
   box-sizing: border-box;
 }
