@@ -46,13 +46,9 @@ export default {
   },
 
   beforeRouteLeave: function(to, from, next) {
-    new Promise(resolve => {
-      this.h1Render = false;
-      this.showMovies = false;
-      setTimeout(() => resolve("done"), 800);
-    }).then(() => {
-      next();
-    });
+    this.h1Render = false;
+    this.showMovies = false;
+    setTimeout(() => next(), 800);
   },
 
   computed: {

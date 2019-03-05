@@ -92,14 +92,8 @@ export default {
   //Flip the main card out before leaving
   beforeRouteLeave: function(to, from, next) {
     //Give enough time to flip out
-    //by going to next route after
-    //Promise resolution
-    new Promise(resolve => {
-      this.reset();
-      setTimeout(() => resolve("done"), 800);
-    }).then(() => {
-      next();
-    });
+    this.reset();
+    setTimeout(() => next(), 800);
   }
 };
 </script>
